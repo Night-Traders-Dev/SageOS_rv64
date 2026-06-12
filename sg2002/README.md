@@ -28,5 +28,8 @@ The platform is integrated into the main SageOS build system via `build.toml`. P
 - **Milestone 5:** Userspace & IPC
 - **Milestone 6:** SMP & Optimization
 
-## Debugging
-The primary debugging interface is UART0 (`115200` baud). Use a serial adapter connected to the appropriate board pins to view early boot logs.
+## Bootloader & Firmware
+The SG2002 boot chain is built using the provided `scripts/build_sg2002_bootloader.sh` script, which handles the acquisition and compilation of OpenSBI, U-Boot, and packaging via `fiptool`.
+
+1. Run: `bash scripts/build_sg2002_bootloader.sh`
+2. The final bootloader package (`fip.bin`) will be generated in `boot_binaries/`.
