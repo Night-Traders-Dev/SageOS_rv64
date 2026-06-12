@@ -2,16 +2,20 @@
 
 This directory contains the platform-specific implementation for the Sophgo SG2002 SoC, used in the Sipeed LicheeRV Nano board.
 
-## Current Status (Milestone 1 Complete)
+## Current Status (Milestone 1-6)
 - [x] UART Driver (`uart.c`)
-- [x] Trap Handler Skeleton (`traps.c`)
-- [x] Identity Paging Skeleton (`paging.c`)
+- [x] Trap Handler (`traps.c` + `trap_entry.S`)
+- [x] Identity Paging (`paging.c` - Skeleton)
 - [x] SBI-based Timer Support (`timer.c`)
-- [x] Physical Allocator Skeleton (`pmm.c`)
+- [x] Physical Allocator (`pmm.c`)
 - [x] Early Heap Allocator (`heap.c`)
-
-## Architecture
-The SG2002 is a RISC-V 64-bit SoC. SageOS runs in Supervisor Mode (S-Mode) and relies on SBI for machine-mode abstractions.
+- [x] Cooperative Scheduler (`scheduler.c` + `switch.S`)
+- [x] IPC Framework (`ipc.c` + `services.c`)
+- [x] Storage/VFS (`sdhci.c` + `vfs_bridge.c` + `fat32.c` backend)
+- [x] SDIO Controller Initialization (`sdio_controller.c`)
+- [x] USB Serial Bridge (`serial_bridge.c` - Skeleton)
+- [x] USB Device Enumeration (`usb_device.c` - Skeleton)
+- [x] Console Abstraction (`console.c`)
 
 ### Memory Map (Early Boot)
 - **Kernel Base:** `0x80000000`
