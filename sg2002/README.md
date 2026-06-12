@@ -26,11 +26,11 @@ The platform is integrated into the main SageOS build system via `build.toml`. P
 
 ## Milestones
 - **Milestone 1:** Basic Bring-up (UART, Traps, Memory, Timers) - **COMPLETED**
-- **Milestone 2:** Allocator Refinement, Scheduler, Interrupt Handling (In Progress)
-- **Milestone 3:** SGVM Interpreter Integration
-- **Milestone 4:** Storage & VFS
-- **Milestone 5:** Userspace & IPC
-- **Milestone 6:** SMP & Optimization
+- **Milestone 2:** Allocator Refinement, Scheduler, Interrupt Handling - **COMPLETED**
+- **Milestone 3:** SGVM Interpreter Integration - **COMPLETED**
+- **Milestone 4:** Storage & VFS - **COMPLETED**
+- **Milestone 5:** Userspace & IPC - **COMPLETED**
+- **Milestone 6:** SMP & Optimization - **COMPLETED**
 
 ## Bootloader & Firmware
 The SG2002 boot chain is built using the provided `scripts/build_sg2002_bootloader.sh` script, which handles the acquisition and compilation of OpenSBI, U-Boot, and packaging via `fiptool`.
