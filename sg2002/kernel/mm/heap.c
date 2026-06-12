@@ -6,8 +6,12 @@ extern char _heap_start[];
 static uintptr_t heap_ptr = (uintptr_t)_heap_start;
 
 void* early_malloc(size_t size) {
-    // 1. Align size
-    // 2. Bump heap_ptr
-    // 3. Return old pointer
-    return (void*)0;
+    // Align size to 8-byte boundary
+    size = (size + 7) & ~7;
+    
+    // Bump heap_ptr
+    uintptr_t ptr = heap_ptr;
+    heap_ptr += size;
+    
+    return (void*)ptr;
 }
